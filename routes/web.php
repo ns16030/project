@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Auth::routes();
 
@@ -22,3 +20,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/events', 'PageController@events');
 Route::get('/master', 'PageController@master');
 Route::get('/training', 'PageController@training');
+Route::get('/', 'PageController@events');
