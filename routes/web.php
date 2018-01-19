@@ -22,3 +22,4 @@ Route::get('/master', 'PageController@master');
 Route::get('/training', 'PageController@training');
 Route::get('/', 'PageController@events');
 Route::get('oneclass/{id}', 'PageController@onemasterclass');
+Route::get('oneevent/{id}', 'PageController@oneevent');

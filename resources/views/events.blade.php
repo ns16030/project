@@ -4,7 +4,7 @@
 
     <h1>Pasākumi</h1>
     @foreach($events as $ev)
-        <div><a href = "/">
+        <div><a href = "/oneevent/{{$ev->id}}">
         <div class="event-thumb">
 
             <h2>{{$ev->name}}</h2>

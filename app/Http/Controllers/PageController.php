@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\events;
 use App\trainings;
 use App\masters;
+use App\User;
 
 class PageController extends Controller
 {
@@ -24,5 +25,9 @@ class PageController extends Controller
     public function onemasterclass($id){
         $masters = masters::find($id);
         return view('onemasterclass', compact ('masters'));
+    }
+    public function oneevent($id){
+        $events = events::find($id);
+        return view('oneevent', compact ('events'));
     }
 }

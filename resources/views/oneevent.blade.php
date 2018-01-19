@@ -1,20 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
+    <h1>{{$events->name}}</h1>
+    <p>{{$events->description}}</p>
 
-    <p>Event Description</p>
+
       <hr>
 
-      <h4>Leave a Comment:</h4>
+      <h4>Ieraksti komentāru:</h4>
       <form role="form">
         <div class="form-group">
           <textarea class="form-control" rows="3" required></textarea>
         </div>
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success">Pievienot</button>
       </form>
       <br><br>
       
-      <p><span class="badge">2</span> Comments:</p><br>
+      <p><span class="badge">2</span> Komentāri:</p><br>
       
       <div class="row">
         <div class="col-sm-2 text-center">
