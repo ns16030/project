@@ -29,4 +29,7 @@ class User extends Authenticatable
     public function masters (){
         return $this->hasMany('App\masters', 'organizer');
     }
+    public function comments (){
+        return $this->hasMany('App\comments', 'user_id');
+    }
 }

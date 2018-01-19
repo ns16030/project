@@ -23,3 +23,5 @@ Route::get('/training', 'PageController@training');
 Route::get('/', 'PageController@events');
 Route::get('oneclass/{id}', 'PageController@onemasterclass');
 Route::get('oneevent/{id}', 'PageController@oneevent');
+
+Route::post('/comments/{id}', 'PageController@writeComment');

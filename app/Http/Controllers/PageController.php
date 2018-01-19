@@ -7,6 +7,8 @@ use App\events;
 use App\trainings;
 use App\masters;
 use App\User;
+use App\comments;
+use Auth;
 
 class PageController extends Controller
 {
@@ -29,5 +31,13 @@ class PageController extends Controller
     public function oneevent($id){
         $events = events::find($id);
         return view('oneevent', compact ('events'));
+    }
+    public function writeComment($id){
+        $com = new comments; 
+        $com->comment = request('comment');
+        $com->user_id = auth::user()->id;
+        $com->article_id = $id;
+        $com->save();
+        return redirect('/');
     }
 }
