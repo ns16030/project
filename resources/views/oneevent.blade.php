@@ -6,7 +6,8 @@
 
 
       <hr>
-
+    @guest
+    @else
       <h4>Ieraksti komentāru:</h4>
       <form role="form" method="post" action="/comments/{{$events->id}}">
           {{ csrf_field() }}
@@ -36,4 +37,5 @@
           </div>
             @endif
             @endforeach
+      @endguest
 @endsection
